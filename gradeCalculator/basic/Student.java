@@ -1,0 +1,34 @@
+package org.study.gradeCalculator.basic;
+
+/**
+ * @author rua
+ */
+
+//학생 정보
+public class Student {
+    int kscore;
+    int mscore;
+    int escore;
+    char grade;
+
+    protected Student(int kscore, int mscore, int escore) {
+        this.kscore = kscore;
+        this.mscore = mscore;
+        this.escore = escore;
+    }
+
+    protected int getAverage(){
+        int avg;
+        avg = (kscore + mscore + escore)/3;
+        return avg;
+    }
+
+    protected char getGrade(){
+        int avg;
+        avg = (kscore + mscore + escore)/3;
+        grade = (avg >= 90) ? 'A' :
+                (avg >= 80) ? 'B' :
+                (avg >= 70) ? 'C' : 'D';
+        return grade;
+    }
+}
